@@ -6,8 +6,8 @@
 // @author       You
 // @match        https://note.com/*
 // @grant        GM_addStyle
-// @updateURL    https://raw.githubusercontent.com/[ユーザー名]/[リポジトリ名]/main/note-toc-fixed.user.js
-// @downloadURL  https://raw.githubusercontent.com/[ユーザー名]/[リポジトリ名]/main/note-toc-fixed.user.js
+// @updateURL    https://raw.githubusercontent.com/RYO1223/userscripts/main/note-toc-fixed.user.js
+// @downloadURL  https://raw.githubusercontent.com/RYO1223/userscripts/main/note-toc-fixed.user.js
 // ==/UserScript==
 
 (function() {
