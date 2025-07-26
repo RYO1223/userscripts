@@ -1,0 +1,40 @@
+{
+  "name": "Userscripts Development",
+  "image": "mcr.microsoft.com/devcontainers/javascript-node:1-20-bullseye",
+  
+  // VS Code Extensions
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "Anthropic.claude-code"
+      ],
+      "settings": {
+        "editor.formatOnSave": true,
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+      }
+    }
+  },
+  
+  // Install Claude Code CLI after container creation
+  "postCreateCommand": "curl -fsSL https://github.com/anthropics/claude-code/releases/latest/download/install.sh | bash",
+  
+  // Features to add to the dev container
+  "features": {
+    "ghcr.io/devcontainers/features/git:1": {},
+    "ghcr.io/devcontainers/features/github-cli:1": {}
+  },
+  
+  // Environment variables
+  "remoteEnv": {
+    "PATH": "${containerEnv:PATH}:${containerEnv:HOME}/.local/bin"
+  },
+  
+  // Forward ports if needed
+  "forwardPorts": [],
+  
+  // Use 'postStartCommand' to run commands each time the container starts
+  "postStartCommand": "echo 'Welcome to Userscripts development environment with Claude Code!'",
+  
+  // Uncomment to connect as root instead
+  // "remoteUser": "root"
+}
